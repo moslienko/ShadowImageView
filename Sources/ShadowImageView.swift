@@ -81,7 +81,7 @@ public class ShadowImageView: UIView {
         }
     }
     
-    override public var contentMode: UIViewContentMode {
+    override public var contentMode: UIView.ContentMode {
         didSet{
             layoutShadow()
         }
@@ -205,7 +205,7 @@ public class ShadowImageView: UIView {
         imageView.contentMode = contentMode
         addSubview(imageView)
         addSubview(blurredImageView)
-        sendSubview(toBack: blurredImageView)
+        sendSubviewToBack(blurredImageView)
     }
 
 }
